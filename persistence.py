@@ -79,6 +79,7 @@ def forget_password(email):
         user = users[key]
         print(user.get_email, email)
         if user.get_email() == email:
-            password = user.get_password
+            password = users[user.get_id][user.get_password]
+            return password
 
 

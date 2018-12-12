@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 {% extends 'layout.html' %}
-<title>Money Saving Tips</title>
+{% block header %}<title>Money Saving Tips</title>{% endblock %}
 <head>
+{% block content %}
 <style>
 body{
 	background-image: url({{ url_for('static', filename='save-money.jpg') }});
@@ -15,11 +16,8 @@ body{
 	position: relative;
 	line-height: 1.4;
 	font-size: 18px;
-    margin-left: 600px;
-    margin-right: 600px;
-    margin-top: 200px;
-    border-style: solid;
-    border-width: 1px;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 h1 {
     text-align: center;
@@ -27,15 +25,15 @@ h1 {
 blockquote {
     font-size: 30px;
 }
-div {
+.tip {
     background-color: antiquewhite;
 }
 </style>
 </head>
-{% block content %}
+
 <body>
 
-<div>
+<div class="tip">
 <h1>Tips and Tricks to Improve Your Finances</h1>
 <p><b>1. Use cash. </b>Spending cash makes the spending more real, and there's an added advantage of knowing when you're out of cash, instead of spending more than you have.</p>
 <p><b>2. Build an emergency fund. </b>It can make a lot of difference. Low-income families with an emergency fund are better off financially than moderate-income families with less saved up.</p>
